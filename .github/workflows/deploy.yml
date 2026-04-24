@@ -37,7 +37,7 @@ jobs:
       - name: Run build script
         run: npm run build
         env:
-          api_key: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
 
       - name: Upload dist/ as artifact
         uses: actions/upload-pages-artifact@v3
