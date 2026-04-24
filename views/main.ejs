@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Playoffs Stat Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="pageTitle">
+    <img src="https://brandlogos.net/wp-content/uploads/2025/04/nba-logo_brandlogos.net_ipeky.png" alt="NBA logo" class="nbaLogo">
+    <h1>Playoff Stat Tracker - </h1>
+    <img src="https://cdn-icons-png.flaticon.com/256/3177/3177043.png" alt="Larry O'Brien NBA championship trophy" class="trophy">
+  </div>
+  <div id="data"></div>
+
+  <div class="flex-container">
+    <% if (allPlayerStats) { %>
+      <% allPlayerStats.forEach(player => { %>
+        <div class="card">
+          <img src=<%= player.image %> alt=<%= player.altText %> style="width:100%">
+          <div class="container">
+            <h4><b><%= player.player %></b></h4>
+            <p><b>Minutes: </b><%= player.minutes %></p>
+            <p><b>Points: </b><%= player.points %></p>
+            <p><b>Assists: </b><%= player.assists %></p>
+            <p><b>Rebounds: </b><%= player.rebounds %></p>
+            <p><b>FG %: </b><%= player.fgPercentage %></p>
+          </div>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+
+  <script>
+    // fetch('/fetch-data')
+    //   .then(res => res.json())
+    //   .then(postseasonData => {
+    //       document.getElementById('data').textContent = JSON.stringify(postseasonData, null, 2);
+    //   })
+    //   .catch(err => console.error(err));
+      
+  </script>
+</body>    
+
+</html>
+
+
+// Stats update everyday with a redeploy triggered by CRON in github actions at 08:00:00 UTC

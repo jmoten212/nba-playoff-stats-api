@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Playoffs Stat Tracker</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <h1>Server is running. Visit /fetch-data to get NBA stats.</h1>
+  <div id="data"></div>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th id="playerNames">Player</th>
+          <th>Minutes</th>
+          <th>Points</th>
+          <th>Assists</th>
+          <th>Rebounds</th>
+          <th>FG %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (allPlayerStats) { %>
+          <% allPlayerStats.forEach(player => { %>
+            <tr>
+              <td><img src="https://cdn.dribbble.com/userupload/26174852/file/original-9a232c862fa178ddac553126f7cba372.jpg?resize=90x0" alt="An animated headshot of LeBron James"></td>
+              <td id="playerNames"><%= player.player %></td>
+              <td><%= player.minutes %></td>
+              <td><%= player.points %></td>
+              <td><%= player.assists %></td>
+              <td><%= player.rebounds %></td>
+              <td><%= player.fgPercentage %></td>
+            </tr>
+          <% }); %>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // fetch('/fetch-data')
+    //   .then(res => res.json())
+    //   .then(postseasonData => {
+    //       document.getElementById('data').textContent = JSON.stringify(postseasonData, null, 2);
+    //   })
+    //   .catch(err => console.error(err));
+      
+  </script>
+</body>    
+
+</html>
