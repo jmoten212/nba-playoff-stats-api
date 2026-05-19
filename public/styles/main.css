@@ -9,15 +9,16 @@ body {
 
 .pageTitle {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-left: 1.8rem;
+  margin-left: calc(0.4vw + 1rem);
 }
 
 h1 {
   font-family: "IBM Plex Sans Condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: clamp(1.4rem, calc(2.5vw + 1rem), 7rem);
+  font-size: clamp(1.4rem, calc(2vw + 1rem), 7rem);
   padding: 0.4rem;
 }
 
@@ -86,11 +87,11 @@ h4 {
 }
 
 .nbaLogo {
-  height: clamp(1.8rem, calc(2vw + 1rem), 7rem);
-  width: clamp(3.4rem, calc(5vw + 1rem), 8.5rem);
+  height: clamp(1.8rem, calc(1.8vw + 1rem), 7rem);
+  width: clamp(3.4rem, calc(4.5vw + 1rem), 8.5rem);
 }
 
 .trophy {
-  width: clamp(1.8rem, calc(4.5vw + 1rem), 7rem);
-  height: clamp(1.8rem, calc(4.5vw + 1rem), 7rem);
+  width: clamp(1.8rem, calc(4vw + 1rem), 7rem);
+  height: clamp(1.8rem, calc(4vw + 1rem), 7rem);
 }

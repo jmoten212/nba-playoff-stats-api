@@ -8,11 +8,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const playerIds = [
-  { name: 'LeBron', id: 1966, fullName: 'LeBron James', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9sb3MtYW5nZWxlcy1sYWtlcnMtbGVicm9uLWphbWVzMjAyMS1taW4tLWlfdXJhMmx0LnBuZz9iZz01ODJDODMmdD1mYWNlYm9vaw==.png', altText: 'An animated headshot of LeBron James' },
-  { name: 'Jokic', id: 3112335, fullName: 'Nikola Jokic', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9kZW52ZXItbnVnZ2V0cy1uaWtvbGEtam9raWMyMDI1LS0ydGg4ZWo0ei5wbmc_Ymc9RkZDNzJDJnQ9ZmFjZWJvb2s=.png', altText: 'An animated headshot of Nikola Jokic' },
-  { name: 'SGA', id: 4278073, fullName: 'Shai Gilgeous-Alexander', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9va2xhaG9tYS1jaXR5LXRodW5kZXItc2hhaS1naWxnZW91cy1hbGV4YW5kZXIyMDIzLW1pbi0tM2JvZHloZGsucG5nP2JnPTAwNzJDRSZ0PWZhY2Vib29r.png', altText: 'An animated headshot of Shai Gilgeous-Alexander' },
-  { name: 'Cade', id: 4432166, fullName: 'Cade Cunningham', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9kZXRyb2l0LXBpc3RvbnMtY2FkZS1jdW5uaW5naGFtMjAyMi1taW4tLW42bmtodmxvLnBuZz9iZz0xRDQyOEEmdD1mYWNlYm9vaw==.png', altText: 'An animated headshot of Cade Cunningham' },
-  { name: 'Wemby', id: 5104157, fullName: 'Victor Wembenyama', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9zYW4tYW50b25pby1zcHVycy12aWN0b3Itd2VtYmFueWFtYS0yMDI2LS16c3dqbjh5bi5wbmc_Ymc9OEQ5MDkzJnQ9ZmFjZWJvb2s=.png', altText: 'An animated headshot of Victor Wembenyama' }
+  { name: 'LeBron', id: 1966, fullName: 'LeBron James', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9sb3MtYW5nZWxlcy1sYWtlcnMtbGVicm9uLWphbWVzMjAyMS1taW4tLWlfdXJhMmx0LnBuZz9iZz01ODJDODMmdD1mYWNlYm9vaw==.png', altText: 'An illustrated headshot of LeBron James' },
+  { name: 'Jokic', id: 3112335, fullName: 'Nikola Jokic', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9kZW52ZXItbnVnZ2V0cy1uaWtvbGEtam9raWMyMDI1LS0ydGg4ZWo0ei5wbmc_Ymc9RkZDNzJDJnQ9ZmFjZWJvb2s=.png', altText: 'An illustrated headshot of Nikola Jokic' },
+  { name: 'SGA', id: 4278073, fullName: 'Shai Gilgeous-Alexander', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9va2xhaG9tYS1jaXR5LXRodW5kZXItc2hhaS1naWxnZW91cy1hbGV4YW5kZXIyMDIzLW1pbi0tM2JvZHloZGsucG5nP2JnPTAwNzJDRSZ0PWZhY2Vib29r.png', altText: 'An illustrated headshot of Shai Gilgeous-Alexander' },
+  { name: 'Cade', id: 4432166, fullName: 'Cade Cunningham', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9kZXRyb2l0LXBpc3RvbnMtY2FkZS1jdW5uaW5naGFtMjAyMi1taW4tLW42bmtodmxvLnBuZz9iZz0xRDQyOEEmdD1mYWNlYm9vaw==.png', altText: 'An illustrated headshot of Cade Cunningham' },
+  { name: 'Wemby', id: 5104157, fullName: 'Victor Wembenyama', image: 'https://cdn.statmuse.com/forge-v2/aHR0cHM6Ly9jZG4uc3RhdG11c2UuY29tL2ltZy9uYmEvcGxheWVycy9zYW4tYW50b25pby1zcHVycy12aWN0b3Itd2VtYmFueWFtYS0yMDI2LS16c3dqbjh5bi5wbmc_Ymc9OEQ5MDkzJnQ9ZmFjZWJvb2s=.png', altText: 'An illustrated headshot of Victor Wembenyama' }
 ];
 
 async function fetchAllPlayerStats() {
