@@ -1,0 +1,124 @@
+{
+  "teams": [
+    {
+      "teamName": "Atlanta Hawks",
+      "id": 1
+    },
+    {
+      "teamName": "Boston Celtics",
+      "id": 2
+    },
+    {
+      "teamName": "New Orleans Pelicans",
+      "id": 3
+    },
+    {
+      "teamName": "Chicago Bulls",
+      "id": 4
+    },
+    {
+      "teamName": "Cleveland Cavaliers",
+      "id": 5
+    },
+    {
+      "teamName": "Dallas Mavericks",
+      "id": 6
+    },
+    {
+      "teamName": "Denver Nuggets",
+      "id": 7
+    },
+    {
+      "teamName": "Detroit Pistons",
+      "id": 8
+    },
+    {
+      "teamName": "Golden State Warriors",
+      "id": 9
+    },
+    {
+      "teamName": "Houston Rockets",
+      "id": 10
+    },
+    {
+      "teamName": "Indiana Pacers",
+      "id": 11
+    },
+    {
+      "teamName": "Los Angeles Clippers",
+      "id": 12
+    },
+    {
+      "teamName": "Los Angeles Lakers",
+      "id": 13
+    },
+    {
+      "teamName": "Miami Heat",
+      "id": 14
+    },
+    {
+      "teamName": "Milwaukee Bucks",
+      "id": 15
+    },
+    {
+      "teamName": "Minnesota Timberwolves",
+      "id": 16
+    },
+    {
+      "teamName": "Brooklyn Nets",
+      "id": 17
+    },
+    {
+      "teamName": "New York Knicks",
+      "id": 18
+    },
+    {
+      "teamName": "Orlando Magic",
+      "id": 19
+    },
+    {
+      "teamName": "Philadelphia 76ers",
+      "id": 20
+    },
+    {
+      "teamName": "Phoenix Suns",
+      "id": 21
+    },
+    {
+      "teamName": "Portland Trail Blazers",
+      "id": 22
+    },
+    {
+      "teamName": "Sacramento Kings",
+      "id": 23
+    },
+    {
+      "teamName": "San Antonio Spurs",
+      "id": 24
+    },
+    {
+      "teamName": "Oklahoma City Thunder",
+      "id": 25
+    },
+    {
+      "teamName": "Utah Jazz",
+      "id": 26
+    },
+    {
+      "teamName": "Washington Wizards",
+      "id": 27
+    },
+    {
+      "teamName": "Toronto Raptors",
+      "id": 28
+    },
+    {
+      "teamName": "Memphis Grizzlies",
+      "id": 29
+    },
+    {
+      "teamName": "Charlotte Hornets",
+      "id": 30
+    }
+  ]
+}

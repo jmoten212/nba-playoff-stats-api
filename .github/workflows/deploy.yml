@@ -1,13 +1,13 @@
 # .github/workflows/deploy.yml
 
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy to Pages - Daily Stats Update
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 12 * * *'
 
 permissions:
   contents: read
