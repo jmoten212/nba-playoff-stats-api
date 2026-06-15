@@ -16,10 +16,10 @@
 </head>
 
 <body>
-  <div class="pageTitle">
-    <img src="https://brandlogos.net/wp-content/uploads/2025/04/nba-logo_brandlogos.net_ipeky.png" alt="NBA logo" class="nbaLogo">
-    <h1>Playoffs Stat Tracker - </h1>
-    <img src="https://cdn-icons-png.flaticon.com/256/3177/3177043.png" alt="Larry O'Brien NBA championship trophy" class="trophy">
+  <div class="page-title">
+    <img src="https://brandlogos.net/wp-content/uploads/2025/04/nba-logo_brandlogos.net_ipeky.png" alt="NBA logo" class="nba-logo">
+    <h1>Playoffs Stat Tracker - 2026</h1>
+    <!-- <img src="https://cdn-icons-png.flaticon.com/256/3177/3177043.png" alt="Larry O'Brien NBA championship trophy" class="trophy"> -->
   </div>
   <div id="data"></div>
 
@@ -41,7 +41,9 @@
               <div class="team-logos">
                 <img src=<%= player.logo %> alt="<%= player.logoAlt %>" >
               </div>
-              <% if (player.eliminated === false) { %>
+              <% if (player.eliminated === 'champion') { %>
+                <img src="https://cdn-icons-png.flaticon.com/256/3177/3177043.png" alt="Larry O'Brien NBA championship trophy" class="trophy-icon">
+              <% } else if (player.eliminated === false) { %>
                 <i class="fas fa-user-check fa-lg"></i>
               <% } else { %>
                 <i class="fas fa-user-xmark fa-lg"></i>
@@ -73,6 +75,10 @@
   <div class="icon-legend">
     <p><i class="fas fa-user-check fa-lg"></i><b> - Active </b></p>
     <p><i class="fas fa-user-xmark fa-lg"></i><b> - Eliminated </b></p>
+    <div class="trophy-legend-div">
+      <img src="https://cdn-icons-png.flaticon.com/256/3177/3177043.png" alt="Larry O'Brien NBA championship trophy" class="trophy-icon-footer">
+      <p><b> - Champion </b></p>
+    </div>
   </div>
   <div class="repo-link">
     <a href="https://github.com/jmoten212/nba-playoff-stats-api" data-tippy-content="Link to GitHub Repository" data-tippy-placement="right-start"> 

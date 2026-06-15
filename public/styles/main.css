@@ -7,7 +7,7 @@ body {
 /* ------------------------------------------------------------------------------------------ */
 
 
-.pageTitle {
+.page-title {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,7 +18,7 @@ h1 {
   font-family: "IBM Plex Sans Condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: clamp(1.4rem, calc(2vw + 1rem), 6rem);
+  font-size: clamp(1.4rem, calc(1.7vw + 1rem), 6rem);
   padding: 0.4rem;
 }
 
@@ -83,15 +83,26 @@ td {
   margin-bottom: 40px;
 }
 
-.nbaLogo {
-  height: clamp(1.8rem, calc(1.8vw + 1rem), 6rem);
-  width: clamp(3.4rem, calc(4.5vw + 1rem), 7.5rem);
+.nba-logo {
+  height: clamp(1.4rem, calc(1.8vw + 1rem), 6rem);
+  width: clamp(3rem, calc(4.5vw + 1rem), 7.5rem);
 }
 
 .trophy {
   width: clamp(1.8rem, calc(4vw + 1rem), 6rem);
   height: clamp(1.8rem, calc(4vw + 1rem), 6rem);
 }
+
+.trophy-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.trophy-icon-footer {
+  width: 30px;
+  height: 30px;
+}
+
 
 .team-logos {
   height: 35px;
@@ -116,6 +127,20 @@ td {
   margin: 0 auto;
   text-align: left;
   font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+.icon-legend p {
+  margin-top: 5px;
+}
+
+.trophy-legend-div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.trophy-legend-div p {
+  margin: 0;
 }
 
 .repo-link {
