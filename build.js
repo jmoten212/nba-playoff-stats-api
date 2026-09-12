@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import { buildPlayerStatSummary, findPostseasonSummary } from './src/app/utils/nbaStats.js';
 
 dotenv.config();
 
@@ -36,37 +37,11 @@ async function fetchAllPlayerStats() {
         'x-rapidapi-key': process.env.RAPIDAPI_KEY,
         'x-rapidapi-host': 'nba-api-free-data.p.rapidapi.com',
       },
-    }).then(response => {
+    }).then((response) => {
       const seasonTypes = response.data.response.gamelog.seasonTypes;
-      const postseasonData = seasonTypes.find(season => season.displayName.includes("Postseason"));
+      const postseasonData = findPostseasonSummary(seasonTypes);
 
-      let totalEvents = 0;
-        if (postseasonData && postseasonData.categories) {
-          postseasonData.categories.forEach(category => {
-            if (category.type === "event" && Array.isArray(category.events)) {
-              totalEvents += category.events.length;
-            }
-          });
-        };
-
-      return {
-        player: player.fullName,
-        games: totalEvents,
-        totalMinutes: postseasonData?.summary.stats[0].stats[0] || 'N/A',
-        avgMinutes: totalEvents ? (Math.round((postseasonData?.summary.stats[0].stats[0] / totalEvents) * 10) / 10).toFixed(1) : 'N/A',
-        totalPoints: postseasonData?.summary.stats[0].stats[13] || 'N/A',
-        avgPoints: totalEvents ? (Math.round((postseasonData?.summary.stats[0].stats[13] / totalEvents) * 10) / 10).toFixed(1) : 'N/A',
-        totalAssists: postseasonData?.summary.stats[0].stats[8] || 'N/A',
-        avgAssists: totalEvents ? (Math.round((postseasonData?.summary.stats[0].stats[8] / totalEvents) * 10) / 10).toFixed(1) : 'N/A',
-        totalRebounds: postseasonData?.summary.stats[0].stats[7] || 'N/A',
-        avgRebounds: totalEvents ? (Math.round((postseasonData?.summary.stats[0].stats[7] / totalEvents) * 10) / 10).toFixed(1) : 'N/A',
-        fgPercentage: postseasonData?.summary.stats[0].stats[2]  || 'N/A',
-        eliminated: player.eliminated,
-        image: player.image,
-        altText: player.altText,
-        logo: player.teamLogo,
-        logoAlt: player.logoAlt
-      };
+      return buildPlayerStatSummary(player, postseasonData);
     })
   );
 
