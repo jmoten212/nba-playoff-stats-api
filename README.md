@@ -23,7 +23,7 @@ Created an API integration built with Express, JS, and EJS that fetches NBA play
 
 <h3>Future Improvements</h3>
 <ul>
-  <li>Add unit and integration tests</li>
+  <li>Add more unit and integration tests</li>
   <li>Add all players from each playoff team and a way to search and request a specific player's stats</li>
   <li>Add more variations of how the stats are displayed - table, charts, etc.</li>
   <li>Improve accessibility</li>
